@@ -24,8 +24,8 @@ baseNum = 2
 N = 4
 W = 200
 emptyStr = " "
-startLoc = "AF117"
-scoreLoc = "AD118"
+startLoc = "B3" 'specify top-left cell of the game field
+scoreLoc = "A3" 'specify cell to show score
 
 ReDim field(4, 4) As Variant
 ReDim L(4) As Variant
