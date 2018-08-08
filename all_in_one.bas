@@ -24,8 +24,8 @@ baseNum = 2
 N = 4
 W = 200
 emptyStr = " "
-startLoc = "P35" 'specify address for top-left corner of game field
-scoreLoc = "V35" 'specify cell to show game score
+startLoc = "AF117"
+scoreLoc = "AD118"
 
 ReDim field(4, 4) As Variant
 ReDim L(4) As Variant
@@ -42,9 +42,9 @@ If checkAlive = False Then
 End If
 
 
-Call numPop
-
-Dim prevKey As String
+If ActiveSheet.Range(scoreLoc).Value = "" Then
+    Call numPop
+End If
 
 
 
@@ -346,5 +346,11 @@ Function checkAlive()
     checkAlive = isAlive
     
 End Function
+
+
+
+
+
+
 
 
